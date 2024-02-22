@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="myFunction()">table</button>
+    <p id="demo"></p>
+    <script>
+        function myFunction() {
+            let userInput = prompt("enter a number to generate table")
+            let value = "";
+            if (isNaN(userInput)) {
+                document.getElementById("demo").innerHTML = "you entered an invalid value";
+                return;
+            }
+            for (let i = 1; i <= 10; i++) {
+                value += userInput + " * " + i + " = " + i * userInput + "<br>";
+                document.getElementById("demo").innerHTML = value;
+            }
+        }
+    </script>
+
+    <button onclick="yourFunction()">base & power</button>
+    <p id="medo"></p>
+    <script>
+        function yourFunction() {
+            let x = prompt("enter a base value")
+            let y = prompt("enter a power value")
+           
+            if (isNaN(x)| isNaN(y) ) {
+                document.getElementById("medo").innerHTML = "you entered an invalid value";
+                return;
+            }
+            Number(x);
+            Number(y);
+            let result = Math.pow(x, y)
+            document.getElementById("medo").innerHTML = result;
+
+        }
+    </script>
+    <button onclick="ourFunction()">odd & even</button>
+    <p id="dodo"></p>
+    <script>
+        function ourFunction() {
+            document.getElementById("dodo").innerHTML = '';
+            let inputVal = prompt("enter a value");
+            if (isNaN(inputVal)) {
+                document.getElementById("dodo").innerHTML = "you entered an invalid value";
+                return;
+            }
+            let value = inputVal % 2;
+            for (let i = value; i <= Number(inputVal); i += 2) {
+                document.getElementById("dodo").innerHTML += i + ",";
+            }
+
+        }
+    </script>
+
+    <button onclick="mixFunction()">print Number List</button>
+    <p id="hoho"></p>
+            <script>
+                function mixFunction() {
+                    let inputVal = prompt("enter a number to print list")
+                    let value = "";
+                    for (let i = 1; i <= Number(inputVal); i++)
+                        value += i + "<br>";
+                    if (isNaN(inputVal)) {
+                        document.getElementById("hoho").innerHTML = "you entered an invalid value";
+                        return;
+                    }
+                    document.getElementById("hoho").innerHTML = value;
+                }
+            </script>
+
+
+</body>
+
+</html>
